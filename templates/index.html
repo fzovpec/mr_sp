@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+
+	<title></title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/main.min.css') }}">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__wrapper">
+			<h1>MR</h1>
+			<ul>
+				<li><a href="#">Contact us</a></li>
+				<li><a href="#">Help us</a></li>
+			</ul>
+		</div>
+	</header>
+	<article class="container">
+		<section class="website_descriptor">
+			<div class="row">
+				<div class="website_descriptor__descriptor col-md-6">
+					<h2 class="website_descriptor__main_sentence">Accelerate and improve the quality of your research</h2>
+					<div class="website_descriptor__text">
+						Our service would facilitate your research process thought using deep natural language processing
+						models
+					</div>
+				</div>
+				<div class="website_descriptor__image col-md-6">
+					<img src="{{ url_for('static', filename='images/529-5292536_online-education-vector-png-clipart (1).png') }}">
+				</div>
+			</div>
+		</section>
+		<section class="website_io">
+			<h2 class="section_h2">Find out source relevance for your research</h2>
+			<div class="row">
+				<div class="website_io__input col-md-6">
+					<form>
+						<div class="website_io__block row" style="display:none">
+							<div class="col-md-4">
+								<span class="website_io__form_text">Title of your essay:</span>
+							</div>
+							<div class="col-md-8">
+								<input type="text" name="title">
+							</div>
+						</div>
+						<div class="website_io__block row" style="display:none">
+							<div class="col-md-4">
+								<span class="website_io__form_text">Research question:</span>
+							</div>
+							<div class="col-md-8">
+								<input type="text" name="question">
+							</div>
+						</div>
+						<div class="website_io__block row">
+							<div class="col-md-4">
+								<span class="website_io__form_text">Website link</span>
+							</div>
+							<div class="col-md-8">
+								<input type="text" id="source_link">
+							</div>
+						</div>
+						<div class="website_io__block row" id="source_warning_text">
+							This resource is not supported. Could you please input your source text?
+						</div>
+						<div class="website_io__block row" id="source_text_block">
+							<div class="col-md-4">
+								<span class="website_io__form_text">Source text:</span>
+							</div>
+							<div class="col-md-8">
+								<textarea id="source_text"></textarea>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="website_io__output col-md-6">
+					<div class="website_io__output_plug">
+						<img src="">
+					</div>
+					<div class="website_io__output_text">
+						<div class="website_io__block">
+							<span class="website_io__form_text" style="display:none">Level of source relevance:</span>
+						</div>
+						<div class="website_io__block">
+							<span class="website_io__form_text" style="display: none">Source reliability:</span>
+						</div>
+						<div class="website_io__block">
+							<span class="website_io__form_text" id="source_summary_output">Source summary:</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</article>
+	<footer class="footer">
+		<div class="footer__wrapper">
+			<h1 class="footer__title">MR</h1>
+			<ul style="display: none">
+				<li><a href="#">Contact us</a></li>
+				<li><a href="#">Help us</a></li>
+			</ul>
+		</div>
+	</footer>
+
+
+	<script src="{{ url_for('static', filename='scripts/common.js') }}"></script>
+
+</body>
+
+</html>
